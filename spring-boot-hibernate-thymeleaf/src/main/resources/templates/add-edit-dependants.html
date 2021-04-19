@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Add Dependants</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h3> Add Dependants</h3>
+        <div class="card">
+            <div class="card-body">
+                <div class="col-md-10">
+                    <form action="#" th:action="@{/createDependnats}" th:object="${dependants}" method="post">
+                        <div class="row">
+                            <div class="form-group col-md-8">
+                                <label for="employee_id" class="col-form-label">Employee ID</label> 
+                                <input type="text" field="*{eid}" name="eid" class="form-control" 
+                                            id="eid" placeholder="Employee ID" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">First Name</label> 
+                                <input type="text" th:field="*{firstName}" class="form-control" 
+                                            id="firstName" placeholder="First Name" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="name" class="col-form-label">Last Name</label> 
+                                <input type="text" th:field="*{lastName}" class="form-control" 
+                                            id="lastName" placeholder="Last Name" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="gender" class="col-form-label">Gender</label> 
+                                <input type="text" field="*{gender}" name="gender" class="form-control" 
+                                            id="gender" placeholder="Gender" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="DOB" class="col-form-label">DOB</label> 
+                                <input type="text" field="*{DOB}" name="DOB" class="form-control" 
+                                            id="DOB" placeholder="DOB" />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="relationship" class="col-form-label">Relationship</label> 
+                                <input type="text" th:field="*{relationship}" class="form-control" 
+                                            id="relationship" placeholder="Relationship" />
+                            </div>
+                            <div class="col-md-6">
+                                <input type="submit" class="btn btn-primary" value=" Submit ">
+                            </div>
+
+                            <input type="hidden" id="id" th:field="*{id}">
+    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
